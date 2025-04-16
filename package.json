@@ -2,7 +2,6 @@
   "name": "greyrock-psych",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://LLMFAO.github.io/greyrock",
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
