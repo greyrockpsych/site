@@ -190,6 +190,12 @@ export default function Clinicians() {
 
 
         <div className="mx-auto max-w-2xl text-center mt-20">
+            <img 
+              src="/clinicians.jpg" 
+              alt="Greyrock Clinicians Group Photo"
+              className="w-full max-w-lg mx-auto rounded-2xl shadow-lg mb-8"
+            />
+
           <p className="text-lg leading-8 text-neutral">
             Our clinicians are committed to providing thorough, evidence-based psychological 
             assessments in a supportive and professional environment. Each member of our team 
