@@ -83,8 +83,8 @@ export default function Services() {
               ¡Hablamos Español!
             </h3>
             <p className="text-neutral">
-              We are committed to providing culturally-informed psychological services. 
-              Spanish language evaluations are available with Dr. Joselyne Perry.
+              We are committed to providing culturally-informed psychological services.
+              Spanish language evaluations are available with our providers.
             </p>
           </div>
         </div>
