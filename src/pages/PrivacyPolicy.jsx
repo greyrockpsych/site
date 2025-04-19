@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
 
         <div className="prose prose-neutral max-w-none"> {/* Using prose for basic markdown styling */}
           <p>
-            The Practice of Therapy Blog and Website is owned and managed by Greyrock Psychological Services LLP. Greyrock Psychological Services LLP (referred to henceforth as GPS LLP) makes every reasonable effort to keep your personal information protected and private. We do not share personal information collected unless prior authorization is given.
+            This website is owned and managed by Greyrock Psychological Services LLP. Greyrock Psychological Services LLP (referred to henceforth as GPS LLP) makes every reasonable effort to keep your personal information protected and private. We do not share personal information collected unless prior authorization is given.
           </p>
           <p>
             This Privacy Policy (the “Policy”) applies to our websites available at: https://greyrockpsych.com/ and/or any other website or mobile application to which this Policy applies (collectively the “Sites”). This Policy will not apply to any of your interactions with Greyrock Psychological Services LLP offline.

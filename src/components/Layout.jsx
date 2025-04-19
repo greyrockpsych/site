@@ -39,13 +39,23 @@ export default function Layout() {
               <p>
                 2627 Redwing Road, Suite 130, Fort Collins, CO 80526
                 <br />
+                <span className="font-semibold">Get Directions: </span>
                 <a
                   href="https://www.google.com/maps/search/?api=1&query=2627+Redwing+Road+Suite+130+Fort+Collins+CO"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-accent hover:text-accent-dark font-semibold"
+                  className="text-accent hover:text-accent-dark underline"
                 >
-                  Get Directions
+                  Google Maps
+                </a>
+                <span className="mx-1">|</span>
+                <a
+                  href="http://maps.apple.com/?q=2627+Redwing+Road+Suite+130+Fort+Collins+CO+80526" // Apple Maps URL
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:text-accent-dark underline"
+                >
+                  Apple Maps
                 </a>
               </p>
               <p className="mt-2">¡Hablamos Español!</p>

@@ -59,7 +59,7 @@ export default function Home() {
                 // Changed bg and focus outline color to #efaa1e
                 className="inline-flex flex-col items-center rounded-md bg-[#efaa1e] px-5 py-2 text-white shadow-sm hover:bg-[#efaa1e]/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#efaa1e] flex-1" /* Added flex-1 */
               >
-                <span className="text-base font-semibold">Schedule Now!</span>
+                <span className="text-base font-semibold whitespace-nowrap">Schedule Now!</span> {/* Added whitespace-nowrap */}
                 <span className="text-xs mt-1">¡Hablamos Español!</span>
               </Link>
             </div>
