@@ -192,7 +192,7 @@ export default function Clinicians() {
         <div className="mx-auto max-w-2xl text-center mt-20">
             <img 
               src="/clinicians.jpg" 
-              alt="Greyrock Clinicians Group Photo"
+              alt="Greyrock Clinicians"
               className="w-full max-w-lg mx-auto rounded-2xl shadow-lg mb-8"
             />
 
