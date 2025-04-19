@@ -22,7 +22,7 @@ export default function Layout() {
               />
             </Link>
             <div className="text-center text-sm text-neutral">
-              <Link to="/privacy" className="hover:text-primary">Privacy Policy</Link>
+              <Link to="/privacy-policy" className="hover:text-primary">Privacy Policy</Link>
               {' '} | {' '}
               <Link to="/contact" className="hover:text-primary">Contact Us</Link>
             </div>

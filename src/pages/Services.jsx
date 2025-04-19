@@ -52,7 +52,7 @@ export default function Services() {
 
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           {Object.values(services).map((service) => (
-            <div 
+            <div
               key={service.title}
               className="bg-white rounded-2xl shadow-sm p-8 ring-1 ring-gray-200"
             >
@@ -65,9 +65,9 @@ export default function Services() {
               <ul className="space-y-3">
                 {service.features.map((feature) => (
                   <li key={feature} className="flex gap-x-3">
-                    <CheckCircleIcon 
-                      className="h-6 w-5 flex-none text-accent-green" 
-                      aria-hidden="true" 
+                    <CheckCircleIcon
+                      className="h-6 w-5 flex-none text-accent-green"
+                      aria-hidden="true"
                     />
                     <span className="text-neutral">{feature}</span>
                   </li>

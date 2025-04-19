@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { UserIcon, PencilIcon } from '@heroicons/react/24/outline'; // Removed AcademicCapIcon
 
 export default function Home() {
   const clinicians = [
@@ -48,21 +49,21 @@ export default function Home() {
               {/* Learn More Button (Outline Style) */}
               <Link
                 to="/services" // Assuming link to services
-                className="rounded-md border border-accent px-5 py-3 text-base font-semibold text-accent shadow-sm hover:bg-accent/10"
+                className="inline-flex items-center justify-center rounded-md border border-accent px-5 py-2 h-14 text-base font-semibold text-accent shadow-sm hover:bg-accent/10 flex-1" /* Added flex-1 */
               >
-                Learn More
+                Learn More {/* Removed inner spans */}
               </Link>
               {/* Schedule Now Button (Updated Background) */}
               <Link
                 to="/contact" // Assuming link to contact
                 // Changed bg and focus outline color to #efaa1e
-                className="rounded-md bg-[#efaa1e] px-5 py-3 text-base font-semibold text-white shadow-sm hover:bg-[#efaa1e]/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#efaa1e]"
+                className="inline-flex flex-col items-center rounded-md bg-[#efaa1e] px-5 py-2 text-white shadow-sm hover:bg-[#efaa1e]/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#efaa1e] flex-1" /* Added flex-1 */
               >
-                Schedule Now!
+                <span className="text-base font-semibold">Schedule Now!</span>
+                <span className="text-xs mt-1">¡Hablamos Español!</span>
               </Link>
             </div>
-            {/* Added Hablamos Español */}
-            <p className="mt-2 text-sm text-neutral">¡Hablamos Español!</p>
+            {/* Removed separate Hablamos Español paragraph */}
           </div>
         </div>
       </div>
@@ -83,24 +84,58 @@ export default function Home() {
           </div>
           <div className="mx-auto mt-8 max-w-none sm:mt-10 lg:mt-12 lg:max-w-none">
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-              {/* Children Assessment Card */}
-              <div className="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-gray-900/10">
-                <h3 className="text-xl font-semibold leading-7 text-primary mb-4">
-                  Psychological Assessment for Children
-                </h3>
-                <p className="text-base leading-7 text-gray-600">
-                  At Greyrock, we are excited to offer comprehensive pediatric psychological evaluations. Our evaluations use well-researched tools and techniques to identify potential developmental concerns, learning difficulties, and mental health issues. We prioritize taking a well-rounded approach, aiming to uncover not just the difficulties a child may have but also their strengths and opportunities for growth. Our ultimate goals are to offer constructive insights for parents, educators, and healthcare providers and aid in identifying interventions and supports that best meet a child's unique needs.
-                </p>
+              {/* Children Assessment Card - Updated Style */}
+              <div className="rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/10 overflow-hidden flex flex-col">
+                {/* Image and Icon Container */}
+                <div className="relative">
+                  <img
+                    src='/children.jpg' // Updated image
+                    alt="Psychological Assessment for Children illustration"
+                    className="w-full h-48 object-cover"
+                  />
+                  {/* Icon */}
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
+                    <span className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-[#efaa1e] shadow-lg">
+                       <PencilIcon className="h-8 w-8 text-white" aria-hidden="true" /> {/* Changed to PencilIcon */}
+                    </span>
+                  </div>
+                </div>
+                {/* Content Area */}
+                <div className="p-8 pt-12 flex-grow flex flex-col"> {/* Added pt-12 for icon overlap */}
+                  <h3 className="text-xl font-semibold leading-7 text-primary mb-4 text-center">
+                    Psychological Assessment for Children
+                  </h3>
+                  <p className="text-base leading-7 text-gray-600 flex-grow">
+                    At Greyrock, we are excited to offer comprehensive pediatric psychological evaluations. Our evaluations use well-researched tools and techniques to identify potential developmental concerns, learning difficulties, and mental health issues. We prioritize taking a well-rounded approach, aiming to uncover not just the difficulties a child may have but also their strengths and opportunities for growth. Our ultimate goals are to offer constructive insights for parents, educators, and healthcare providers and aid in identifying interventions and supports that best meet a child's unique needs.
+                  </p>
+                </div>
               </div>
 
-              {/* Adult Assessment Card */}
-              <div className="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-gray-900/10">
-                <h3 className="text-xl font-semibold leading-7 text-primary mb-4">
-                  Psychological Assessment for Adults
-                </h3>
-                <p className="text-base leading-7 text-gray-600">
-                  Adult evaluations at Greyrock are thorough, research-informed, and take a "whole person" approach. Client's lived experience is valued, and special attention is paid to issues that might come up around neurodivergence, trauma, and life history. We offer comprehensive assessments for individuals who are seeking diagnostic clarity due to case complexity, but we also offer shorter or more tailored assessments for clients who have more specific questions or needs.
-                </p>
+              {/* Adult Assessment Card - Updated Style */}
+              <div className="rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/10 overflow-hidden flex flex-col">
+                 {/* Image and Icon Container */}
+                 <div className="relative">
+                  <img
+                    src='/adult.jpg' // Updated image
+                    alt="Psychological Assessment for Adults illustration"
+                    className="w-full h-48 object-cover"
+                  />
+                  {/* Icon */}
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
+                    <span className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-[#efaa1e] shadow-lg">
+                       <UserIcon className="h-8 w-8 text-white" aria-hidden="true" />
+                    </span>
+                  </div>
+                </div>
+                 {/* Content Area */}
+                 <div className="p-8 pt-12 flex-grow flex flex-col"> {/* Added pt-12 for icon overlap */}
+                  <h3 className="text-xl font-semibold leading-7 text-primary mb-4 text-center">
+                    Psychological Assessment for Adults
+                  </h3>
+                  <p className="text-base leading-7 text-gray-600 flex-grow">
+                    Adult evaluations at Greyrock are thorough, research-informed, and take a "whole person" approach. Client's lived experience is valued, and special attention is paid to issues that might come up around neurodivergence, trauma, and life history. We offer comprehensive assessments for individuals who are seeking diagnostic clarity due to case complexity, but we also offer shorter or more tailored assessments for clients who have more specific questions or needs.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -124,23 +159,20 @@ export default function Home() {
                 className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/10 transition-shadow hover:shadow-xl"
               >
                 <div className="flex-shrink-0">
-                  <img className="h-auto w-full object-cover" src={clinician.image} alt={clinician.name} />
+                  <img className="aspect-square sm:h-auto w-full object-cover object-top" src={clinician.image} alt={clinician.name} /> {/* Changed to aspect-square on mobile */}
                 </div>
-                <div className="flex flex-1 flex-col justify-between bg-white p-6">
-                  <div className="flex-1">
+                {/* Restructured content area */}
+                <div className="bg-white p-6">
+                  <div className="flex items-center justify-between"> {/* Flex row for name and arrow */}
                     <p className="text-xl font-semibold text-primary">{clinician.name}</p>
-                    {/* Optional: Add role or short description here if needed */}
-                    {/* <p className="mt-3 text-base text-gray-500">{clinician.role || 'Licensed Psychologist'}</p> */}
+                    <span className="inline-flex items-center justify-center rounded-full bg-accent p-2 text-white shadow-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                      </svg>
+                    </span>
                   </div>
-                  <div className="mt-6 flex items-center">
-                    <div className="ml-auto">
-                       <span className="inline-flex items-center justify-center rounded-full bg-accent p-2 text-white shadow-lg">
-                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                           <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                         </svg>
-                       </span>
-                    </div>
-                  </div>
+                  {/* Optional: Add role or short description here if needed */}
+                  {/* <p className="mt-3 text-base text-gray-500">{clinician.role || 'Licensed Psychologist'}</p> */}
                 </div>
               </Link>
             ))}
